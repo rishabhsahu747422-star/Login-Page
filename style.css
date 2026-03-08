@@ -1,0 +1,197 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#0b0b0b;
+}
+
+/* MAIN BOX */
+
+.container{
+
+position:relative;
+
+width:750px;
+height:450px;
+
+background:#1e1e1e;
+
+border:2px solid #e46033;
+
+box-shadow:0 0 25px #e46033;
+
+overflow:hidden;
+
+display:flex;
+
+}
+
+/* LEFT PANEL */
+
+.welcome{
+
+position:absolute;
+
+width:50%;
+height:100%;
+
+background:linear-gradient(135deg,#ff7a45,#e46033);
+
+clip-path:polygon(0 0,100% 0,70% 100%,0 100%);
+
+padding:60px;
+
+color:white;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+animation:slideIn 1s ease;
+
+}
+
+.welcome h1{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.welcome p{
+font-size:14px;
+line-height:22px;
+}
+
+/* FORM */
+
+.form-box{
+
+position:absolute;
+
+right:0;
+
+width:50%;
+height:100%;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+padding:60px;
+
+}
+
+.form-box h2{
+color:white;
+margin-bottom:30px;
+}
+
+/* INPUT */
+
+.input-box{
+
+position:relative;
+
+width:100%;
+margin-top:25px;
+
+}
+
+.input-box input{
+
+width:100%;
+padding:10px 0;
+
+background:transparent;
+
+border:none;
+
+border-bottom:2px solid #fff;
+
+outline:none;
+
+color:white;
+
+font-size:16px;
+
+}
+
+.input-box label{
+
+position:absolute;
+
+left:0;
+
+top:10px;
+
+color:#aaa;
+
+transition:.3s;
+
+}
+
+/* label animation */
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label{
+
+top:-12px;
+
+font-size:12px;
+
+color:#ff7a45;
+
+}
+
+/* BUTTON */
+
+button{
+
+margin-top:35px;
+
+padding:12px;
+
+border:none;
+
+background:linear-gradient(90deg,#ff7a45,#e46033);
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+border-radius:5px;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 10px #ff7a45;
+
+}
+
+/* ANIMATION */
+
+@keyframes slideIn{
+
+from{
+transform:translateX(-100%);
+}
+
+to{
+transform:translateX(0);
+}
+
+}
